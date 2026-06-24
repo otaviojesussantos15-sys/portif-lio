@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tavinx Edits | Portfólio Premium</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#070707;color:#fff;overflow-x:hidden}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid #111;
+}
+
+.logo{color:#4da3ff;font-weight:bold;font-size:18px}
+
+nav a{
+color:#fff;
+margin-left:15px;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{color:#4da3ff}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle,#0d1b2a,#000);
+padding:20px;
+}
+
+.hero h1{font-size:45px}
+.hero p{color:#aaa;margin-top:10px;max-width:600px}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#4da3ff;
+color:#000;
+font-weight:bold;
+border-radius:8px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{transform:scale(1.05)}
+
+/* SEÇÕES */
+section{padding:80px 20px;text-align:center}
+
+h2{color:#4da3ff;margin-bottom:30px}
+
+/* VIDEO GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:#111;
+border-radius:12px;
+overflow:hidden;
+transition:0.3s;
+cursor:pointer;
+position:relative;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 10px 30px rgba(77,163,255,0.3);
+}
+
+.card iframe{
+width:100%;
+height:200px;
+}
+
+/* SOBRE */
+.about{
+max-width:700px;
+margin:auto;
+color:#bbb;
+line-height:1.6;
+}
+
+/* SOCIAL */
+.social a{
+display:inline-block;
+margin:10px;
+padding:10px 15px;
+border-radius:8px;
+text-decoration:none;
+background:#111;
+color:#fff;
+border:1px solid #222;
+transition:0.3s;
+}
+
+.social a:hover{
+background:#4da3ff;
+color:#000;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#000;
+padding:15px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* FOOTER */
+footer{
+padding:20px;
+text-align:center;
+color:#666;
+border-top:1px solid #111;
+margin-top:50px;
+}
+
+/* ANIMAÇÃO */
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">TAVINX EDITS</div>
+<nav>
+<a href="#videos">Vídeos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Editor de Vídeos Premium</h1>
+<p>Criação de vídeos profissionais para YouTube, Shorts e redes sociais com estilo cinematográfico.</p>
+<a class="btn" href="#videos">Ver Portfólio</a>
+</section>
+
+<section id="videos" class="fade">
+<h2>Portfólio</h2>
+
+<div class="grid">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+</div>
+</section>
+
+<section id="sobre" class="fade">
+<h2>Sobre mim</h2>
+<p class="about">
+Sou editor de vídeos focado em conteúdo para YouTube, Instagram e criadores digitais.
+Meu objetivo é transformar ideias simples em vídeos envolventes e profissionais.
+</p>
+</section>
+
+<section id="contato" class="fade">
+<h2>Contato</h2>
+
+<div class="social">
+<a href="https://www.instagram.com/tavinx554/" target="_blank">Instagram</a>
+<a href="https://wa.me/557592065232" target="_blank">WhatsApp</a>
+</div>
+</section>
+
+<footer>
+© 2026 Tavinx Edits — Todos os direitos reservados
+</footer>
+
+<a class="whatsapp" href="https://wa.me/557592065232" target="_blank">
+WhatsApp
+</a>
+
+<script>
+// animação scroll
+const elements = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+elements.forEach(el => {
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+el.classList.add('show');
+}
+});
+});
+</script>
+
+</body>
+</html>
