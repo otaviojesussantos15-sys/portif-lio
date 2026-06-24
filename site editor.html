@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio | Editor de Vídeo</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0a0a0f;
+      --card:#12121a;
+      --text:#e7e7ea;
+      --muted:#9a9aa5;
+      --accent:#3aa0ff;
+      --border:rgba(255,255,255,0.08);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Source Sans 3", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    h1,h2,h3{
+      font-family:"Outfit", sans-serif;
+    }
+
+    /* NAV */
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      backdrop-filter:blur(10px);
+      background:rgba(10,10,15,0.6);
+      border-bottom:1px solid var(--border);
+      z-index:1000;
+    }
+
+    nav a{
+      color:var(--text);
+      text-decoration:none;
+      margin-left:20px;
+      font-size:14px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:var(--accent);
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:0 8%;
+    }
+
+    .hero h1{
+      font-size:48px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      max-width:600px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 18px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      margin-right:10px;
+      color:var(--text);
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      border-color:var(--accent);
+      transform:translateY(-2px);
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#000;
+      border:none;
+    }
+
+    /* SECTIONS */
+    section{
+      padding:100px 8%;
+    }
+
+    h2{
+      font-size:28px;
+      margin-bottom:20px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    /* SKILLS */
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:15px;
+    }
+
+    .tag{
+      padding:6px 12px;
+      border:1px solid var(--border);
+      border-radius:20px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* PROJECTS */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:var(--accent);
+    }
+
+    .card h3{
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom:10px;
+    }
+
+    .card a{
+      color:var(--accent);
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    /* TIMELINE */
+    .timeline{
+      border-left:2px solid var(--border);
+      padding-left:20px;
+    }
+
+    .item{
+      margin-bottom:20px;
+    }
+
+    .item h4{
+      margin-bottom:5px;
+    }
+
+    .item span{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      padding:60px 8%;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+    }
+
+    /* ANIMATION */
+    .hidden{
+      opacity:0;
+      transform:translateY(30px);
+      transition:all 0.6s ease;
+    }
+
+    .show{
+      opacity:1;
+      transform:translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div><strong>Portfólio</strong></div>
+  <div>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#experiencia">Experiência</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero hidden">
+    <div>
+      <h1>Otávio Jesus</h1>
+      <p>
+        Editor de vídeo especializado em criação de conteúdo dinâmico e storytelling visual.
+        Trabalho com DaVinci Resolve criando vídeos para YouTube, redes sociais e projetos autorais.
+      </p>
+
+      <a class="btn primary" href="#projetos">Ver Projetos</a>
+      <a class="btn" href="mailto:Otaviojesusantos15@gmail.com">Contato</a>
+      <a class="btn" href="https://github.com/" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="hidden">
+    <h2>Sobre Mim</h2>
+    <p class="muted">
+      Sou editor de vídeo focado em transformar ideias em conteúdo visual envolvente.
+      Tenho experiência com cortes dinâmicos, ritmo narrativo e edição para plataformas digitais.
+    </p>
+
+    <div class="skills">
+      <span class="tag">DaVinci Resolve</span>
+      <span class="tag">Edição de Vídeo</span>
+      <span class="tag">Storytelling</span>
+      <span class="tag">YouTube</span>
+      <span class="tag">Shorts & Reels</span>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="hidden">
+    <h2>Projetos</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Projeto 1</h3>
+        <p>Projeto de edição focado em cortes dinâmicos e narrativa visual para YouTube.</p>
+        <p class="muted">Ferramenta: DaVinci Resolve</p>
+        <a href="https://github.com/" target="_blank">Ver no GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>Projeto 2</h3>
+        <p>Edição para conteúdo curto (Reels/Shorts) com foco em retenção.</p>
+        <p class="muted">Ferramenta: DaVinci Resolve</p>
+        <a href="https://github.com/" target="_blank">Ver no GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>Projeto 3</h3>
+        <p>Projeto experimental de edição cinematográfica com storytelling.</p>
+        <p class="muted">Ferramenta: DaVinci Resolve</p>
+        <a href="https://github.com/" target="_blank">Ver no GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section id="experiencia" class="hidden">
+    <h2>Experiência</h2>
+
+    <div class="timeline">
+      <div class="item">
+        <h4>Editor de Vídeo Freelancer</h4>
+        <span>Trabalhos em vídeos para redes sociais e YouTube</span>
+      </div>
+
+      <div class="item">
+        <h4>Criação de Conteúdo</h4>
+        <span>Desenvolvimento de vídeos com foco em retenção e engajamento</span>
+      </div>
+
+      <div class="item">
+        <h4>Projetos Autorais</h4>
+        <span>Exploração de estilos de edição cinematográfica</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="hidden">
+    <h2>Contato</h2>
+    <p class="muted">Entre em contato para trabalhos e colaborações.</p>
+
+    <p><strong>WhatsApp:</strong> 75 92065232</p>
+    <p><strong>Email:</strong> Otaviojesusantos15@gmail.com</p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/tavinx554/" target="_blank">@tavinx554</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Otávio Jesus — Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  const elements = document.querySelectorAll('.hidden');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
